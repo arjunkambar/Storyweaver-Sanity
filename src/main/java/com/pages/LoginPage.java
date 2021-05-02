@@ -32,7 +32,7 @@ public class LoginPage extends TestBase {
 	WebElement Loader;
 
 	public void Login_Page() throws InterruptedException {
-		TestBase.clickable_wait(10, Signin_Button);
+		TestBase.clickable_wait(20, Signin_Button);
 		Signin_Button.click();
 		Email.sendKeys(TestBase.prop.getProperty("username"));
 		button.click();
