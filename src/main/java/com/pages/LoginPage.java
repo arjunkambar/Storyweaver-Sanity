@@ -2,6 +2,7 @@ package com.pages;
 
 import org.junit.Assert;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import com.utility.TestBase;
@@ -52,6 +53,12 @@ public class LoginPage extends TestBase {
 		System.out.println(title);
 		boolean signin = title.equals("Sign Up/Log In");
 		Assert.assertFalse("Not logged-in", signin);
+	}
+	
+	public void sign_Out() {
+		Actions action=new Actions(driver);
+		action.moveToElement(Signin_Button);
+		
 	}
 
 	/*

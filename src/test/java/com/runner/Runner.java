@@ -6,9 +6,10 @@ import cucumber.api.junit.Cucumber;
 
 @RunWith(Cucumber.class)
 @CucumberOptions(features = "Feature", 
-  				glue = "com.steps", 
-  				dryRun = false, 
-  				monochrome = true, 
-  				format = { "pretty","html:target" })
+	glue = "com.steps", 
+	dryRun = false, 
+	monochrome = true, 
+	format = { "pretty",
+		"html:target" })
 public class Runner {
 }

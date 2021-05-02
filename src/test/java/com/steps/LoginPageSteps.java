@@ -49,7 +49,7 @@ public class LoginPageSteps extends TestBase {
 		login.verify_username();
 	}
 
-	@And("^User should see login successfull notification$")
+	@Then("^User should see login successfull notification$")
 	public void user_should_see_login_successfull_notification() {
 		login = new LoginPage();
 		login.notification_Verify_and_Close();
