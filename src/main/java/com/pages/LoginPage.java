@@ -50,7 +50,7 @@ public class LoginPage extends TestBase {
 	public void verify_username() throws InterruptedException {
 		Thread.sleep(2000);
 		String title = Signin_Button.getText();
-		System.out.println(title);
+		//System.out.println(title);
 		boolean signin = title.equals("Sign Up/Log In");
 		Assert.assertFalse("Not logged-in", signin);
 	}
