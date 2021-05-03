@@ -1,28 +1,4 @@
 -------------------------------------------------------------------------------
 Test set: com.runner.Runner
 -------------------------------------------------------------------------------
-Tests run: 5, Failures: 0, Errors: 2, Skipped: 2, Time elapsed: 108.787 s <<< FAILURE! - in com.runner.Runner
-Scenario: Test Login page with valid credentials.When User enters valid  username and password  Time elapsed: 0.042 s  <<< ERROR!
-org.openqa.selenium.NoSuchElementException: 
-no such element: Unable to locate element: {"method":"css selector","selector":"*[name='username']"}
-  (Session info: chrome=90.0.4430.93)
-For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
-Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
-System info: host: 'ADMIN-PC', ip: '192.168.43.248', os.name: 'Windows 7', os.arch: 'amd64', os.version: '6.1', java.version: '1.8.0_221'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 90.0.4430.93, chrome: {chromedriverVersion: 89.0.4389.23 (61b08ee2c5002..., userDataDir: C:\Windows\TEMP\scoped_dir4...}, goog:chromeOptions: {debuggerAddress: localhost:53455}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Session ID: ed176430615a7265be157dce66a44889
-*** Element info: {Using=name, value=username}
-
-Scenario: Test Login page with valid credentials  Time elapsed: 0.047 s  <<< ERROR!
-org.openqa.selenium.NoSuchElementException: 
-no such element: Unable to locate element: {"method":"css selector","selector":"*[name='username']"}
-  (Session info: chrome=90.0.4430.93)
-For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
-Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
-System info: host: 'ADMIN-PC', ip: '192.168.43.248', os.name: 'Windows 7', os.arch: 'amd64', os.version: '6.1', java.version: '1.8.0_221'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 90.0.4430.93, chrome: {chromedriverVersion: 89.0.4389.23 (61b08ee2c5002..., userDataDir: C:\Windows\TEMP\scoped_dir4...}, goog:chromeOptions: {debuggerAddress: localhost:53455}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Session ID: ed176430615a7265be157dce66a44889
-*** Element info: {Using=name, value=username}
-
+Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 197.886 s - in com.runner.Runner

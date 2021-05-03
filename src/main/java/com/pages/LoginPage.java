@@ -55,11 +55,7 @@ public class LoginPage extends TestBase {
 		Assert.assertFalse("Not logged-in", signin);
 	}
 	
-	public void sign_Out() {
-		Actions action=new Actions(driver);
-		action.moveToElement(Signin_Button);
-		
-	}
+
 
 	/*
 	 * public void verify_footer_text() { WebElement text = footer
