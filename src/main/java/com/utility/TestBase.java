@@ -10,6 +10,7 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
+
 public class TestBase {
 	public static WebDriver driver;
 	public static Properties prop;
@@ -24,7 +25,7 @@ public class TestBase {
 			e.printStackTrace();
 		}
 	}
-
+	
 	public static void initialization() {
 		String browser = prop.getProperty("browser");
 		if (browser.equalsIgnoreCase("chrome")) {

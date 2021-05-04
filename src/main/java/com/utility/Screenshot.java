@@ -2,9 +2,11 @@ package com.utility;
 
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
-import cucumber.api.Scenario;
-import cucumber.api.java.After;
-import cucumber.api.java.Before;
+import io.cucumber.java.After;
+import io.cucumber.java.Before;
+import io.cucumber.java.Scenario;
+
+
 
 public class Screenshot extends TestBase{
 	Scenario scenario;
@@ -18,7 +20,7 @@ public class Screenshot extends TestBase{
 		if (scenario.isFailed()) {
 			TakesScreenshot screehshot = (TakesScreenshot) driver;
 			byte[] data = screehshot.getScreenshotAs(OutputType.BYTES);
-			scenario.embed(data, "image/png");
+			scenario.embed(data,"Image/png");
 		}
 	}
 }

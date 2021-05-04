@@ -5,10 +5,11 @@ import org.openqa.selenium.TakesScreenshot;
 import com.pages.LoginPage;
 import com.utility.Screenshot;
 import com.utility.TestBase;
-import cucumber.api.Scenario;
-import cucumber.api.java.After;
-import cucumber.api.java.Before;
-import cucumber.api.java.en.*;
+import io.cucumber.java.After;
+import io.cucumber.java.Before;
+import io.cucumber.java.Scenario;
+import io.cucumber.java.en.*;
+
 
 public class LoginPageSteps extends TestBase {
 	LoginPage login = new LoginPage();
