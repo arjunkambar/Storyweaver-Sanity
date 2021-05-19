@@ -1,0 +1,4 @@
+# Created at 2021-05-13T17:21:52.210
+Boot Manifest-JAR contains absolute paths in classpath 'H:\Java\Eclipse\Eclipse Photon\Workspace\StoryweaverSanity\target\test-classes'
+Hint: <argLine>-Djdk.net.URLClassPath.disableClassPathURLCheck=true</argLine>
+

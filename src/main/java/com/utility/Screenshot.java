@@ -6,10 +6,8 @@ import io.cucumber.java.After;
 import io.cucumber.java.Before;
 import io.cucumber.java.Scenario;
 
-
-
 public class Screenshot extends TestBase{
-	Scenario scenario;
+	
 	@Before
 	public void setUp(Scenario scenario) {
 		this.scenario = scenario;
@@ -23,4 +21,6 @@ public class Screenshot extends TestBase{
 			scenario.embed(data,"Image/png");
 		}
 	}
+
+
 }
