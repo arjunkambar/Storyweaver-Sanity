@@ -36,6 +36,8 @@ public class ImagePage extends TestBase {
 	List<WebElement> Image_Cards;
 	@FindBy(xpath = "//a[text()='Load More']")
 	WebElement Load_More;
+	@FindBys(@FindBy(className = "pb-svg-icon pb-svg-icon--type-loader pb-loader__icon"))
+	List<WebElement> Loader;
 	@FindBy(xpath = "//div[@class='grid__container']//div[@class='pb-image-card']")
 	WebElement Image_Card;
 	@FindBy(className = "pb-image-card__title")
@@ -52,8 +54,8 @@ public class ImagePage extends TestBase {
 	WebElement Start_Button;
 	@FindBy(xpath = "//span[text()='Reading Order']")
 	WebElement Reading_Order;
-	@FindBy(className = "pb-modal__bounds")
-	WebElement Non_logged_in_Popup;
+	@FindBys(@FindBy(className = "pb-modal__bounds"))
+	List<WebElement> Non_logged_in_Popup;
 
 	public void go_To_Image_Page() {
 		Actions actions = new Actions(driver);
@@ -122,7 +124,7 @@ public class ImagePage extends TestBase {
 
 	public void click_On_Load_More() throws Exception {
 		Load_More.click();
-		Thread.sleep(2000);
+		HomePage.invisibilty_Wait(Loader);
 	}
 
 	public boolean images_Count_After_Load_More() {
@@ -155,10 +157,17 @@ public class ImagePage extends TestBase {
 		return Views_Count_After_Refresh == Views_Count_Before_Refresh + 1;
 	}
 
+	public boolean non_logged_in_Popup() {
+		if (Non_logged_in_Popup.size() != 0) {
+			return true;
+		} else {
+			return false;
+		}
+	}
+
 	public void click_on_Create_Story() {
 		Create_Story.click();
-		if (HomePage.is_Guest_User() == true) {
-			Non_logged_in_Popup.isDisplayed();
+		if (non_logged_in_Popup() == true) {
 			System.out.println("Not logged-in, Please log into your StoryWeaver "
 					+ "account to create a story from this illustration.");
 		}

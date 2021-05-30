@@ -1,10 +1,12 @@
 package com.pages;
 
+import java.util.List;
 import java.util.concurrent.TimeUnit;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -58,11 +60,6 @@ public class HomePage extends TestBase {
 		js.executeScript("arguments[0].scrollIntoView(true);", Element);
 	}
 
-	public static void Invisibility_wait(WebDriver driver, WebElement Element, int time_in_seconds) {
-		WebDriverWait wait = new WebDriverWait(driver, time_in_seconds);
-		wait.until(ExpectedConditions.invisibilityOf(Element));
-	}
-
 	public static void scroll_Up() {
 		JavascriptExecutor js = (JavascriptExecutor) driver;
 		js.executeScript("window.scrollBy(0,-document.body.scrollHeight)");
@@ -74,5 +71,18 @@ public class HomePage extends TestBase {
 				.pollingEvery(1, TimeUnit.SECONDS).ignoring(NoSuchElementException.class);
 		wait.until(ExpectedConditions.invisibilityOf(Element));
 
+	}
+
+	public static void mouse_Hover(WebElement Element) {
+		Actions actions = new Actions(driver);
+		actions.moveToElement(Element).build().perform();
+	}
+
+	public static void invisibilty_Wait(List<WebElement> Elements) throws InterruptedException {
+		int Count = 0;
+		while (Elements.size() != 0 && Count < 3) {
+			Thread.sleep(1000);
+			Count++;
+		}
 	}
 }
