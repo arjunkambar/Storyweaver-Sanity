@@ -28,6 +28,6 @@ public class HomePageSteps extends TestBase {
 	@Then("user should be able to see the footer notice")
 	public void user_should_be_able_to_see_the_footer_notice() {
 		homepage = new HomePage();
-		Assert.assertTrue("Footer notice/Sign Up is not displaying", homepage.is_Guest_User());
+		Assert.assertTrue("Footer notice/Sign Up is not displaying", HomePage.is_Guest_User());
 	}
 }

@@ -10,9 +10,10 @@ public class Screenshot extends TestBase{
 	
 	@Before
 	public void setUp(Scenario scenario) {
-		this.scenario = scenario;
+		TestBase.scenario = scenario;
 	}
 
+	@SuppressWarnings("deprecation")
 	@After
 	public void teardown() {
 		if (scenario.isFailed()) {

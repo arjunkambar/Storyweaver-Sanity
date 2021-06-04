@@ -1,17 +1,13 @@
 package com.pages;
 
 import java.util.List;
-import java.util.concurrent.TimeUnit;
 import org.openqa.selenium.JavascriptExecutor;
-import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.FluentWait;
-import org.openqa.selenium.support.ui.Wait;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import com.utility.TestBase;
@@ -60,17 +56,9 @@ public class HomePage extends TestBase {
 		js.executeScript("arguments[0].scrollIntoView(true);", Element);
 	}
 
-	public static void scroll_Up() {
+	public static void scroll_Up(int Vertical_Pixel) {
 		JavascriptExecutor js = (JavascriptExecutor) driver;
-		js.executeScript("window.scrollBy(0,-document.body.scrollHeight)");
-	}
-
-	public static void flent_Wiat(WebElement Element) {
-		@SuppressWarnings("deprecation")
-		Wait<WebDriver> wait = new FluentWait<WebDriver>(driver).withTimeout(5, TimeUnit.SECONDS)
-				.pollingEvery(1, TimeUnit.SECONDS).ignoring(NoSuchElementException.class);
-		wait.until(ExpectedConditions.invisibilityOf(Element));
-
+		js.executeScript("window.scrollBy(0," + -Vertical_Pixel + ")");
 	}
 
 	public static void mouse_Hover(WebElement Element) {

@@ -11,7 +11,7 @@ public class CreatePage extends TestBase {
 	String Language = prop.getProperty("language");
 	String Level = prop.getProperty("level");
 	String Orientation = prop.getProperty("Orientation");
-	String Story_Name;
+	public String Story_Name;
 
 	public CreatePage() {
 		PageFactory.initElements(driver, this);
@@ -89,6 +89,8 @@ public class CreatePage extends TestBase {
 	WebElement New_Arrivals;
 	@FindBy(xpath = "//div[@class='pb-tab pb-tab--active']//h3[@class='pb-book-card__title']")
 	WebElement Verify_Title;
+	@FindBy(xpath = "//div[@class='pb-multiple-rows-carousel']//div[@class='slick-arrow slick-prev']")
+	WebElement Multiple_Rows;
 
 	public void go_to_Create_Page() {
 		HomePage.mouse_Hover(Create);
@@ -251,13 +253,25 @@ public class CreatePage extends TestBase {
 				.equalsIgnoreCase("Wohooo! Your story will appear on the New Arrivals in a short while.");
 	}
 
-	public boolean verify_Published_Story_in_NewArrivals() {
+	public void click_NewArrivals() {
+		HomePage.Visibility_wait(driver, New_Arrivals, 5);
+		HomePage.scroll_Into_View(Multiple_Rows);
+		New_Arrivals.click();
+	}
+
+	public boolean verify_Published_Story_in_NewArrivals() throws Exception {
 		Close_Notification.click();
 		driver.navigate().refresh();
-		driver.navigate().refresh();
-		HomePage.Visibility_wait(driver, New_Arrivals, 5);
-		HomePage.scroll_Down(1200);
-		New_Arrivals.click();
+		click_NewArrivals();
+		int count = 0;
+		while (!Verify_Title.getText().equalsIgnoreCase(Story_Name) && count < 3) {
+			Thread.sleep(1000);
+			driver.navigate().refresh();
+			HomePage.Visibility_wait(driver, New_Arrivals, 5);
+			HomePage.scroll_Into_View(Multiple_Rows);
+			New_Arrivals.click();
+			count++;
+		}
 		return Verify_Title.getText().equalsIgnoreCase(Story_Name);
 	}
 

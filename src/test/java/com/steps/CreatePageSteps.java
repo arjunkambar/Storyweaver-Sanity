@@ -109,8 +109,8 @@ public class CreatePageSteps extends TestBase {
 	}
 
 	@Then("user should be able to see published story in {string}")
-	public void user_should_be_able_to_see_published_story_in(String string) {
-		Assert.assertTrue("Published story is not displaying in New Arrivals",
+	public void user_should_be_able_to_see_published_story_in(String string) throws Exception {
+		Assert.assertTrue("Published story: " + createpage.Story_Name + " is taking time to display in New Arrivals",
 				createpage.verify_Published_Story_in_NewArrivals());
 	}
 

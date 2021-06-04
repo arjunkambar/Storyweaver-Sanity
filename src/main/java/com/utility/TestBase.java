@@ -32,7 +32,7 @@ public class TestBase {
 		if (browser.equalsIgnoreCase("chrome")) {
 			System.setProperty("webdriver.chrome.silentOutput", "true");
 			System.setProperty("webdriver.chrome.driver",
-					"H:\\Java\\Eclipse\\" + "Eclipse Photon\\Workspace\\StoryweaverSanity\\Drivers\\chromedriver.exe");
+					"H:/Java/Eclipse/" + "Eclipse Photon/Workspace/StoryweaverSanity/Drivers/chromedriver.exe");
 			driver = new ChromeDriver();
 		} else if (browser.equalsIgnoreCase("firefox")) {
 			System.setProperty("webdriver.driver.geckodriver",
@@ -43,8 +43,7 @@ public class TestBase {
 
 	public static void enter_baseURL() {
 		driver.manage().window().maximize();
-		// driver.manage().timeouts().pageLoadTimeout(TestUtil.PageTimeOut,
-		// TimeUnit.SECONDS);
+		// driver.manage().timeouts().pageLoadTimeout(TestUtil.PageTimeOut,TimeUnit.SECONDS);
 		driver.manage().timeouts().implicitlyWait(TestUtil.ImpliciteWaitTime, TimeUnit.SECONDS);
 		driver.get(prop.getProperty("baseURL"));
 		driver.navigate().refresh();
