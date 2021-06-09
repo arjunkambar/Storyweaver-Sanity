@@ -1,0 +1,12 @@
+com\pages\HomePage.class
+com\pages\ReadalongPage.class
+com\pages\BookshelfPage.class
+com\utility\TestUtil.class
+com\pages\TranslatePage.class
+com\pages\CreatePage.class
+com\pages\ImagePage.class
+com\pages\LoginPage.class
+com\utility\Screenshot.class
+com\pages\ReadPage.class
+com\pages\OfflinePage.class
+com\utility\TestBase.class

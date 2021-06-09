@@ -1,0 +1,10 @@
+com\runner\Runner.class
+com\steps\CreatePageSteps.class
+com\steps\LoginPageSteps.class
+com\steps\ReadalongPageSteps.class
+com\steps\BookshelfPageSteps.class
+com\steps\HomePageSteps.class
+com\steps\ImagePageSteps.class
+com\steps\OfflinePageSteps.class
+com\steps\TranslatePageSteps.class
+com\steps\ReadPageSteps.class

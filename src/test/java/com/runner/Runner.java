@@ -11,9 +11,9 @@ import io.cucumber.junit.CucumberOptions;
 	dryRun = false, 
 	monochrome = true, 
 	strict = true,
-	//tags = {"@tag1 or @tag2 or @tag8"},
-	plugin = {"pretty","io.qameta.allure.cucumber5jvm.AllureCucumber5Jvm",
-				"html:target"})
+	tags = {"@tag1 or @tag2 or @tag3 or @tag4 or @tag5 or @tag6 or @tag7 or @tag8"},
+	plugin = {"pretty","io.qameta.allure.cucumber5jvm.AllureCucumber5Jvm"})
+
 public class Runner {
 }
  

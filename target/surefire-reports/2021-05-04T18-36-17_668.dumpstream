@@ -1,7 +1,0 @@
-# Created at 2021-05-04T18:36:18.828
-Boot Manifest-JAR contains absolute paths in classpath 'H:\Java\Eclipse\Eclipse Photon\Workspace\StoryweaverSanity\target\test-classes'
-Hint: <argLine>-Djdk.net.URLClassPath.disableClassPathURLCheck=true</argLine>
-
-# Created at 2021-05-04T18:36:20.293
-Error: Could not find or load main class 						-Dcucumber.options=--plugin 						io.qameta.allure.cucumber4jvm.AllureCucumber4Jvm
-

@@ -6,8 +6,8 @@ import java.util.concurrent.TimeUnit;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
-
 import io.cucumber.java.Scenario;
+import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class TestBase {
 	public static WebDriver driver;
@@ -31,12 +31,11 @@ public class TestBase {
 		String browser = prop.getProperty("browser");
 		if (browser.equalsIgnoreCase("chrome")) {
 			System.setProperty("webdriver.chrome.silentOutput", "true");
-			System.setProperty("webdriver.chrome.driver",
-					"H:/Java/Eclipse/" + "Eclipse Photon/Workspace/StoryweaverSanity/Drivers/chromedriver.exe");
+			WebDriverManager.chromedriver().setup();
 			driver = new ChromeDriver();
 		} else if (browser.equalsIgnoreCase("firefox")) {
-			System.setProperty("webdriver.driver.geckodriver",
-					"H:\\Java\\Eclipse\\" + "Eclipse Photon\\Workspace\\StoryweaverSanity\\Drivers\\geckodriver.exe");
+			System.setProperty("webdriver.chrome.silentOutput", "true");
+			WebDriverManager.firefoxdriver().setup();
 			driver = new FirefoxDriver();
 		}
 	}

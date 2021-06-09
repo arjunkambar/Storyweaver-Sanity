@@ -1,7 +1,0 @@
--------------------------------------------------------------------------------
-Test set: com.runner.Runner
--------------------------------------------------------------------------------
-Tests run: 5, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 171.933 s <<< FAILURE! - in com.runner.Runner
-Storyweaver Create page.Publish the story  Time elapsed: 53.718 s  <<< FAILURE!
-java.lang.AssertionError: Published story: acholi is taking time to display in New Arrivals
-
