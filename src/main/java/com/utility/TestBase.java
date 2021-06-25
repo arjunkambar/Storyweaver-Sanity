@@ -19,8 +19,8 @@ public class TestBase {
 	public TestBase() {
 		try {
 			prop = new Properties();
-			//String path = System.getProperty("user.dir");
-			FileInputStream f = new FileInputStream("101.53.142.60/job/Sanity_Testing_using_JAVA/ws/src/main/java/com/configuration/config.properties");
+			String path = System.getProperty("user.dir");
+			FileInputStream f = new FileInputStream(path + "\\src\\main\\java\\com\\configuration\\config.properties");
 			prop.load(f);
 		} catch (Exception e) {
 			e.printStackTrace();
