@@ -19,8 +19,8 @@ public class TestBase {
 	public TestBase() {
 		try {
 			prop = new Properties();
-			FileInputStream f = new FileInputStream("H:/Java/Eclipse/Eclipse Photon"
-					+ "/Workspace/StoryweaverSanity/src/main/java/com/configuration/config.properties");
+			String path = System.getProperty("user.dir");
+			FileInputStream f = new FileInputStream(path + "\\src\\main\\java\\com\\configuration\\config.properties");
 			prop.load(f);
 		} catch (Exception e) {
 			e.printStackTrace();
