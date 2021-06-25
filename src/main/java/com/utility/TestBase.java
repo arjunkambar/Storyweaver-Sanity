@@ -32,7 +32,7 @@ public class TestBase {
 		if (browser.equalsIgnoreCase("chrome")) {
 			System.setProperty("webdriver.chrome.silentOutput", "true");
 			String path = System.getProperty("user.dir");
-			System.setProperty(path + "/Drivers/chromedriver");
+			System.setProperty("webdriver.chrome.driver", path + "/Drivers/chromedriver");
 			//WebDriverManager.chromedriver().setup();
 			driver = new ChromeDriver();
 		} else if (browser.equalsIgnoreCase("firefox")) {
