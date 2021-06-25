@@ -20,7 +20,7 @@ public class TestBase {
 		try {
 			prop = new Properties();
 			String path = System.getProperty("user.dir");
-			FileInputStream f = new FileInputStream(path + "\\src\\main\\java\\com\\configuration\\config.properties");
+			FileInputStream f = new FileInputStream(path + "\\ws\\src\\main\\java\\com\\configuration\\config.properties");
 			prop.load(f);
 		} catch (Exception e) {
 			e.printStackTrace();
