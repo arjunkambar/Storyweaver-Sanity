@@ -34,7 +34,9 @@ public class TestBase {
 			//String path = System.getProperty("user.dir");
 			//System.setProperty("webdriver.chrome.driver", path + "/Drivers/chromedriver");
 			WebDriverManager.chromedriver().driverVersion("80.0.3987.106").setup();
-			driver = new ChromeDriver();
+			ChromeOptions options = new ChromeOptions();
+			options.setExperimentalOption("useAutomationExtension", false);
+			driver = new ChromeDriver(options);
 		} else if (browser.equalsIgnoreCase("firefox")) {
 			System.setProperty("webdriver.chrome.silentOutput", "true");
 			WebDriverManager.firefoxdriver().setup();
