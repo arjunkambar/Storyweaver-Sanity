@@ -36,7 +36,8 @@ public class TestBase {
 			//System.setProperty("webdriver.chrome.driver", path + "/Drivers/chromedriver");
 			WebDriverManager.chromedriver().driverVersion("80.0.3987.106").setup();
 			ChromeOptions options = new ChromeOptions();
-			options.setExperimentalOption("useAutomationExtension", false);
+			options.addArguments("--no-sandbox");
+			options.addArguments("--disable-dev-shm-usage");
 			driver = new ChromeDriver(options);
 		} else if (browser.equalsIgnoreCase("firefox")) {
 			System.setProperty("webdriver.chrome.silentOutput", "true");
