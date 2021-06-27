@@ -32,12 +32,11 @@ public class TestBase {
 		String browser = prop.getProperty("browser");
 		if (browser.equalsIgnoreCase("chrome")) {
 			System.setProperty("webdriver.chrome.silentOutput", "true");
-			//String path = System.getProperty("user.dir");
-			//System.setProperty("webdriver.chrome.driver", path + "/Drivers/chromedriver");
-			WebDriverManager.chromedriver().driverVersion("80.0.3987.106").setup();
+			String path = System.getProperty("user.dir");
+			System.setProperty("webdriver.chrome.driver", path + "/Drivers/chromedriver");
+			//WebDriverManager.chromedriver().driverVersion("80.0.3987.106").setup();
 			ChromeOptions options = new ChromeOptions();
-			options.addArguments("--no-sandbox");
-			options.addArguments("--disable-dev-shm-usage");
+			options.setHeadless(true);
 			driver = new ChromeDriver(options);
 		} else if (browser.equalsIgnoreCase("firefox")) {
 			System.setProperty("webdriver.chrome.silentOutput", "true");
