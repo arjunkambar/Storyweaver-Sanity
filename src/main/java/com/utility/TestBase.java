@@ -31,12 +31,12 @@ public class TestBase {
 	public static void initialization() {
 		String browser = prop.getProperty("browser");
 		if (browser.equalsIgnoreCase("chrome")) {
-			System.setProperty("webdriver.chrome.silentOutput", "true");
-			String path = System.getProperty("user.dir");
-			System.setProperty("webdriver.chrome.driver", path + "/Drivers/chromedriver");
-			//WebDriverManager.chromedriver().driverVersion("80.0.3987.106").setup();
 			ChromeOptions options = new ChromeOptions();
 			options.setHeadless(true);
+			System.setProperty("webdriver.chrome.silentOutput", "true");
+			//String path = System.getProperty("user.dir");
+			System.setProperty("webdriver.chrome.driver", "./Drivers/chromedriver");
+			//WebDriverManager.chromedriver().driverVersion("80.0.3987.106").setup();
 			driver = new ChromeDriver(options);
 		} else if (browser.equalsIgnoreCase("firefox")) {
 			System.setProperty("webdriver.chrome.silentOutput", "true");
