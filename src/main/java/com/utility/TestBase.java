@@ -33,6 +33,7 @@ public class TestBase {
 		if (browser.equalsIgnoreCase("chrome")) {
 			ChromeOptions options = new ChromeOptions();
 			options.setHeadless(true);
+			options.addArguments("start-maximized");
 			System.setProperty("webdriver.chrome.silentOutput", "true");
 			//String path = System.getProperty("user.dir");
 			System.setProperty("webdriver.chrome.driver", "./Drivers/chromedriver");
@@ -46,7 +47,7 @@ public class TestBase {
 	}
 
 	public static void enter_baseURL() {
-		driver.manage().window().maximize();
+		//driver.manage().window().maximize();
 		// driver.manage().timeouts().pageLoadTimeout(TestUtil.PageTimeOut,TimeUnit.SECONDS);
 		driver.manage().timeouts().implicitlyWait(TestUtil.ImpliciteWaitTime, TimeUnit.SECONDS);
 		driver.get(prop.getProperty("baseURL"));
