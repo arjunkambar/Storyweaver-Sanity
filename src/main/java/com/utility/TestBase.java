@@ -32,9 +32,9 @@ public class TestBase {
 		String browser = prop.getProperty("browser");
 		if (browser.equalsIgnoreCase("chrome")) {
 			System.setProperty("webdriver.chrome.silentOutput", "true");
-			//String path = System.getProperty("user.dir");
-			//System.setProperty("webdriver.chrome.driver", path + "/Drivers/chromedriver");
-			WebDriverManager.chromedriver().driverVersion("80.0.3987.106").setup();
+			String path = System.getProperty("user.dir");
+			System.setProperty("webdriver.chrome.driver", path + "/Drivers/chromedriver");
+			//WebDriverManager.chromedriver().driverVersion("80.0.3987.106").setup();
 			ChromeOptions options = new ChromeOptions();
 			options.setHeadless(true);
 			driver = new ChromeDriver(options);
